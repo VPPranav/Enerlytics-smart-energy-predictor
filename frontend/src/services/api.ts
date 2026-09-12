@@ -10,7 +10,11 @@ import {
   ModelMetadata,
 } from '../types';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+const API_BASE =
+  window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1'
+    ? 'http://127.0.0.1:8000/api'
+    : 'https://enerlytics-smart-energy-predictor-backend.onrender.com/api';
 
 const apiClient = axios.create({
   baseURL: API_BASE,
