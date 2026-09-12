@@ -1,0 +1,38 @@
+{
+  "Linear Regression": {
+    "validation": {
+      "mae": 0.1777,
+      "rmse": 0.3149,
+      "r2": 0.7679
+    },
+    "test": {
+      "mae": 0.178,
+      "rmse": 0.3317,
+      "r2": 0.7947
+    }
+  },
+  "Random Forest": {
+    "validation": {
+      "mae": 0.1296,
+      "rmse": 0.2488,
+      "r2": 0.8551
+    },
+    "test": {
+      "mae": 0.1171,
+      "rmse": 0.2079,
+      "r2": 0.9194
+    }
+  },
+  "XGBoost": {
+    "validation": {
+      "mae": 0.1228,
+      "rmse": 0.2293,
+      "r2": 0.8769
+    },
+    "test": {
+      "mae": 0.1196,
+      "rmse": 0.2244,
+      "r2": 0.9061
+    }
+  }
+}

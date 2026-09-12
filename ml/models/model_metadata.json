@@ -1,0 +1,111 @@
+{
+  "model_type": "XGBoost",
+  "model_version": "xgboost-v1",
+  "trained_at": "2026-09-12T06:31:47.075688",
+  "dataset": {
+    "name": "UCI Appliances Energy Prediction",
+    "total_records": 3289,
+    "train_records": 2302,
+    "val_records": 493,
+    "test_records": 494,
+    "start_date": "2016-01-11 18:00:00",
+    "end_date": "2016-05-27 18:00:00"
+  },
+  "features": [
+    "floor_area",
+    "occupants",
+    "temperature",
+    "humidity",
+    "hour",
+    "day_of_week",
+    "month",
+    "previous_consumption",
+    "is_weekend",
+    "is_peak_hour",
+    "temp_humidity_index",
+    "area_per_occupant",
+    "building_type_commercial",
+    "building_type_other",
+    "building_type_residential",
+    "appliance_usage_high",
+    "appliance_usage_low",
+    "appliance_usage_medium",
+    "appliance_usage_very_high"
+  ],
+  "prediction_interval": {
+    "method": "Empirical validation residual quantile (90% confidence)",
+    "margin_kwh": 0.2909,
+    "margin_95_kwh": 0.4733,
+    "residual_std": 0.1936,
+    "residual_mean": 0.1228
+  },
+  "reliability_thresholds": {
+    "floor_area": {
+      "min": 60.0,
+      "max": 555.6,
+      "p01": 70.006,
+      "p25": 133.025,
+      "p75": 203.0,
+      "p99": 490.39499999999987,
+      "iqr": 69.975,
+      "mean": 190.18453518679408,
+      "std": 93.05189603642808
+    },
+    "occupants": {
+      "min": 1.0,
+      "max": 16.0,
+      "p01": 1.0,
+      "p25": 2.0,
+      "p75": 4.0,
+      "p99": 16.0,
+      "iqr": 2.0,
+      "mean": 4.026933101650738,
+      "std": 3.244880358925973
+    },
+    "temperature": {
+      "min": -5.0,
+      "max": 19.1,
+      "p01": -4.098999999999999,
+      "p25": 2.8,
+      "p75": 8.8,
+      "p99": 15.297999999999957,
+      "iqr": 6.000000000000001,
+      "mean": 5.717767158992181,
+      "std": 4.142160134940633
+    },
+    "humidity": {
+      "min": 45.4,
+      "max": 100.0,
+      "p01": 51.2,
+      "p25": 74.7,
+      "p75": 92.1,
+      "p99": 99.4,
+      "iqr": 17.39999999999999,
+      "mean": 82.57176368375326,
+      "std": 12.243848872145096
+    },
+    "previous_consumption": {
+      "min": 0.077,
+      "max": 9.281,
+      "p01": 0.11402000000000001,
+      "p25": 0.254,
+      "p75": 0.706,
+      "p99": 3.4957899999999955,
+      "iqr": 0.45199999999999996,
+      "mean": 0.6283401390095569,
+      "std": 0.7079864292187601
+    }
+  },
+  "selected_metrics": {
+    "validation": {
+      "mae": 0.1228,
+      "rmse": 0.2293,
+      "r2": 0.8769
+    },
+    "test": {
+      "mae": 0.1196,
+      "rmse": 0.2244,
+      "r2": 0.9061
+    }
+  }
+}

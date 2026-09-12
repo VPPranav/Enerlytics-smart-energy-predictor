@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="enerlyticsGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10b981" />
+      <stop offset="0.5" stop-color="#06b6d4" />
+      <stop offset="1" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="boltGrad" x1="18" y1="8" x2="30" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34d399" />
+      <stop offset="1" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+  <path d="M24 4L42 14.4V33.6L24 44L6 33.6V14.4L24 4Z" stroke="url(#enerlyticsGrad)" stroke-width="3" stroke-linejoin="round" fill="#181d25"/>
+  <path d="M10 24H16L19 18L24 30L28 20L31 26H38" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.7"/>
+  <path d="M26 8L15 25H25L21 40L34 22H24L28 8H26Z" fill="url(#boltGrad)"/>
+</svg>

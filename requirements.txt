@@ -1,0 +1,26 @@
+# ==========================================
+# Enerlytics — Python Backend Dependencies
+# ==========================================
+
+# Web API Framework & Server
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.8.0
+
+# Machine Learning & Scientific Computing
+numpy>=1.26.0
+pandas>=2.2.0
+scipy>=1.13.0
+scikit-learn>=1.5.0
+xgboost>=2.1.0
+joblib>=1.4.0
+
+# HTTP Clients & Networking
+requests>=2.31.0
+httpx>=0.27.0
+python-dateutil>=2.8.2
+
+# Open-Meteo Weather API Integration
+openmeteo-requests>=1.2.0
+requests-cache>=1.2.0
+retry-requests>=2.0.0
