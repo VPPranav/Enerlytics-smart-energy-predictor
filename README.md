@@ -19,9 +19,16 @@
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5+-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Frontend%20Live-000000?style=flat-square&logo=vercel&logoColor=white)](https://enerlytics-smart-energy-predictor.vercel.app/)
+[![Render Deployment](https://img.shields.io/badge/Render-Backend%20Live-46E3B7?style=flat-square&logo=render&logoColor=black)](https://enerlytics-smart-energy-predictor-backend.onrender.com/)
+[![Swagger Docs](https://img.shields.io/badge/Swagger%20Docs-Live-85EA2D?style=flat-square&logo=swagger&logoColor=black)](https://enerlytics-smart-energy-predictor-backend.onrender.com/docs)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
 **Author**: **Pranav V P** &bull; **Contact**: `pranavvp1507@gmail.com`
+
+> 🌐 **Live Web Application**: [enerlytics-smart-energy-predictor.vercel.app](https://enerlytics-smart-energy-predictor.vercel.app/)  
+> ⚡ **Live Production API**: [enerlytics-smart-energy-predictor-backend.onrender.com](https://enerlytics-smart-energy-predictor-backend.onrender.com/)  
+> 📖 **Interactive Swagger UI**: [enerlytics-smart-energy-predictor-backend.onrender.com/docs](https://enerlytics-smart-energy-predictor-backend.onrender.com/docs)
 
 </div>
 
@@ -30,29 +37,31 @@
 ## 📑 Table of Contents
 
 1. [Executive Overview](#-executive-overview)
-2. [Key Capabilities & Feature Matrix](#-key-capabilities--feature-matrix)
-3. [System Architecture & Data Flow](#-system-architecture--data-flow)
-4. [Dataset Specification](#-dataset-specification)
-5. [Feature Engineering & Mathematical Formulations](#-feature-engineering--mathematical-formulations)
-6. [Time-Series Cross-Validation Strategy](#-time-series-cross-validation-strategy)
-7. [Model Benchmark & Comparative Evaluation](#-model-benchmark--comparative-evaluation)
-8. [Prediction Reliability & Out-Of-Distribution (OOD) Guard](#-prediction-reliability--out-of-distribution-ood-guard)
-9. [Explainable AI: Lundberg TreeSHAP Attribution](#-explainable-ai-lundberg-treeshap-attribution)
-10. [What-If Scenario Simulator](#-what-if-scenario-simulator)
-11. [Actual vs Predicted Ground-Truth Tracking](#-actual-vs-predicted-ground-truth-tracking)
-12. [Energy-Saving Recommendations & Baseline Comparison](#-energy-saving-recommendations--baseline-comparison)
-13. [Open-Meteo Live Weather & Forecast Integration](#-open-meteo-live-weather--forecast-integration)
-14. [Energy Audit Reporting & Data Export](#-energy-audit-reporting--data-export)
-15. [Dark Grey Industrial Design System & Enerlytics Branding](#-dark-grey-industrial-design-system--enerlytics-branding)
-16. [REST API Documentation & Endpoint Specifications](#-rest-api-documentation--endpoint-specifications)
-17. [Project Directory Structure](#-project-directory-structure)
-18. [Installation & Quickstart Guide](#-installation--quickstart-guide)
-19. [Model Training & Evaluation Pipeline](#-model-training--evaluation-pipeline)
-20. [Automated Verification & Test Suite](#-automated-verification--test-suite)
-21. [Zero-Database Privacy & Local Storage Architecture](#-zero-database-privacy--local-storage-architecture)
-22. [Engineering Constraints & Limitations](#-engineering-constraints--limitations)
-23. [Future Roadmap](#-future-roadmap)
-24. [License & Acknowledgements](#-license--acknowledgements)
+2. [Application Preview & Interface Showcase](#-application-preview--interface-showcase)
+3. [Key Capabilities & Feature Matrix](#-key-capabilities--feature-matrix)
+4. [System Architecture & Data Flow](#-system-architecture--data-flow)
+5. [Dataset Specification](#-dataset-specification)
+6. [Feature Engineering & Mathematical Formulations](#-feature-engineering--mathematical-formulations)
+7. [Time-Series Cross-Validation Strategy](#-time-series-cross-validation-strategy)
+8. [Model Benchmark & Comparative Evaluation](#-model-benchmark--comparative-evaluation)
+9. [Prediction Reliability & Out-Of-Distribution (OOD) Guard](#-prediction-reliability--out-of-distribution-ood-guard)
+10. [Explainable AI: Lundberg TreeSHAP Attribution](#-explainable-ai-lundberg-treeshap-attribution)
+11. [What-If Scenario Simulator](#-what-if-scenario-simulator)
+12. [Actual vs Predicted Ground-Truth Tracking](#-actual-vs-predicted-ground-truth-tracking)
+13. [Energy-Saving Recommendations & Baseline Comparison](#-energy-saving-recommendations--baseline-comparison)
+14. [Open-Meteo Live Weather & Forecast Integration](#-open-meteo-live-weather--forecast-integration)
+15. [Energy Audit Reporting & Data Export](#-energy-audit-reporting--data-export)
+16. [Dark Grey Industrial Design System & Enerlytics Branding](#-dark-grey-industrial-design-system--enerlytics-branding)
+17. [REST API Documentation & Endpoint Specifications](#-rest-api-documentation--endpoint-specifications)
+18. [Project Directory Structure](#-project-directory-structure)
+19. [Installation & Quickstart Guide](#-installation--quickstart-guide)
+20. [Production Cloud Deployment (Render + Vercel)](#-production-cloud-deployment-render--vercel)
+21. [Model Training & Evaluation Pipeline](#-model-training--evaluation-pipeline)
+22. [Automated Verification & Test Suite](#-automated-verification--test-suite)
+23. [Zero-Database Privacy & Local Storage Architecture](#-zero-database-privacy--local-storage-architecture)
+24. [Engineering Constraints & Limitations](#-engineering-constraints--limitations)
+25. [Future Roadmap](#-future-roadmap)
+26. [License & Acknowledgements](#-license--acknowledgements)
 
 ---
 
@@ -68,6 +77,36 @@
 - **What-If Scenario Simulator**: Empowers facility managers to interactively simulate environmental and operational shifts with instant $\Delta\text{kWh}$ and dollar-cost recalculations.
 - **Telemetry Ground-Truth Parity**: Provides closed-loop tracking comparing actual utility meter logs against model inferences with automated MAE, RMSE, and MAPE calculations.
 - **Live Environmental Synchronization**: Integrates the Open-Meteo REST API with cached HTTP sessions and exponential backoff retries to pull real-time weather and 24-hour temperature forecasts.
+
+---
+
+## 📸 Application Preview & Interface Showcase
+
+<div align="center">
+
+### 1. Telemetry Dashboard & 24-Hour Diurnal Baseline Profile
+![Enerlytics Dashboard](images/dashboard.png)
+*Real-time sensor telemetry, system connectivity indicators, and 24-hour empirical baseline consumption profiles across residential, commercial, and weekend operating schedules.*
+
+<br/>
+
+### 2. Real-Time Inference Engine & Lundberg TreeSHAP Attributions
+![Enerlytics Inference & Explainability](images/predict.png)
+*Physics-based building parameter inputs, live Open-Meteo atmospheric synchronization, 90% confidence interval estimation ($\pm 0.291\text{ kWh}$), and exact Lundberg TreeSHAP waterfall decomposition.*
+
+<br/>
+
+### 3. Chronological Prediction History & 90% Confidence Bounds
+![Enerlytics Analytics & Parity](images/analytics.png)
+*Chronological prediction timeline, actual meter reading log, empirical upper/lower 90% uncertainty margins, and real-time reliability classification.*
+
+<br/>
+
+### 4. Model Architecture & Cross-Algorithm Benchmark Matrix
+![Enerlytics Model Comparison](images/model.png)
+*Strictly out-of-sample comparative evaluation across Linear Regression baseline, Random Forest candidate, and selected Production XGBoost model.*
+
+</div>
 
 ---
 
@@ -675,6 +714,268 @@ cd frontend
 npm run dev
 ```
 - Web Application: `http://localhost:5173/`
+
+---
+
+## 🚀 Production Cloud Deployment (Render + Vercel)
+
+Enerlytics is architected as a decoupled, production-grade cloud system with zero database overhead:
+- **Frontend**: Hosted on **Vercel** as a high-performance, statically pre-rendered React 19 + Vite Single Page Application (SPA).
+- **Backend**: Hosted on **Render** as a high-concurrency Python ASGI Web Service running FastAPI and Uvicorn.
+- **ML Runtime**: Pre-serialized XGBoost and preprocessing artifacts (`.joblib`) bundled directly with the backend, eliminating runtime retraining latency.
+- **Client Storage**: Zero-database state persistence using client-side `window.localStorage`.
+
+### 🌐 Live Production Endpoints
+
+| Service | Hosting Platform | URL | Purpose |
+| :--- | :--- | :--- | :--- |
+| **Frontend Web App** | **Vercel** | [enerlytics-smart-energy-predictor.vercel.app](https://enerlytics-smart-energy-predictor.vercel.app/) | Production interactive UI, telemetry dashboard, TreeSHAP visualizations |
+| **Backend API** | **Render** | [enerlytics-smart-energy-predictor-backend.onrender.com](https://enerlytics-smart-energy-predictor-backend.onrender.com/) | FastAPI ML inference engine, OOD validation, Open-Meteo proxy |
+| **Swagger API Docs** | **Render** | [enerlytics-smart-energy-predictor-backend.onrender.com/docs](https://enerlytics-smart-energy-predictor-backend.onrender.com/docs) | Interactive OpenAPI / Swagger UI testing console |
+
+---
+
+### 🌐 Cloud Deployment Architecture
+
+```
+INTERNET
+   │
+   ▼
+┌─────────────────────────────────────────────────────────────┐
+│                           VERCEL                            │
+│                                                             │
+│                React 19 + Vite + TypeScript                 │
+│         enerlytics-smart-energy-predictor.vercel.app        │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               │ HTTPS / Axios
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│                           RENDER                            │
+│                                                             │
+│                FastAPI + XGBoost + TreeSHAP                 │
+│       enerlytics-smart-energy-predictor-backend.onrender.com │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+              ┌────────────────┴────────────────┐
+              ▼                                 ▼
+     XGBoost ML Pipeline                  Open-Meteo API
+      .joblib Artifacts                    Weather Data
+```
+
+This matches the core design of the instrument: the React client communicates with the FastAPI backend through HTTP/JSON over HTTPS, and the backend performs model inference with sub-2ms latency.
+
+---
+
+### 🛠️ Step-by-Step Deployment Procedure
+
+#### 1. Local Baseline & Verification
+Initially, Enerlytics was fully verified running locally across two dedicated processes:
+- **Backend**: FastAPI Python service running on `http://127.0.0.1:8000` via `python run_backend.py`.
+- **Frontend**: React/Vite development server running on `http://localhost:5173` via `npm run dev`.
+- **Build verification**: Production bundle generation validated via `npm run build` inside `frontend/`.
+
+#### 2. Project Monorepo Structure & GitHub Integration
+The complete project was committed and pushed to GitHub ([VPPranav/Enerlytics-smart-energy-predictor](https://github.com/VPPranav/Enerlytics-smart-energy-predictor)):
+```
+Enerlytics-Smart_Energy_Consumption_Predictor/
+├── backend/                  # FastAPI service & endpoints
+│   └── app/
+│       ├── models/           # Production .joblib ML artifacts & metadata
+│       ├── routes/           # REST endpoints (/predict, /model, /weather)
+│       └── services/         # TreeSHAP, recommendations, weather client
+├── frontend/                 # React 19 + TypeScript + Vite + Tailwind
+│   ├── src/
+│   │   ├── services/api.ts   # Dynamic environment-aware API client
+│   │   └── components/       # Dark grey industrial telemetry widgets
+│   ├── package.json
+│   └── vite.config.ts
+├── images/                   # UI previews & architecture captures
+├── ml/                       # Training, evaluation & benchmarking pipelines
+├── requirements.txt          # Python production dependencies
+├── run_backend.py            # Local backend runner
+├── test_backend.py           # 6-case automated verification suite
+└── README.md
+```
+
+#### 3. Backend Deployment on Render (FastAPI Web Service)
+Render was selected because the application requires an active Python execution runtime to serve ML inferences rather than just serving static HTML:
+
+1. **Created a Render Web Service**:
+   - In the Render dashboard: **New +** &rarr; **Web Service** &rarr; Connect GitHub repository `VPPranav/Enerlytics-smart-energy-predictor`.
+2. **Configured Environment**:
+   - **Language**: Python 3 (supports Python 3.11 / 3.12).
+   - **Region**: Closest to target users.
+   - **Branch**: `main`.
+3. **Installed Python Dependencies**:
+   - **Build Command**:
+     ```bash
+     pip install -r requirements.txt
+     ```
+   - Render automatically caches virtual environment wheels across builds for rapid redeployment.
+4. **Configured Production ASGI Server**:
+   - **Start Command**:
+     ```bash
+     uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+     ```
+   > [!IMPORTANT]
+   > While local development runs on `127.0.0.1:8000`, cloud container platforms like Render require listening on all network interfaces (`0.0.0.0`) and dynamically binding to the platform-injected `$PORT` environment variable.
+5. **In-Memory Model Loading**:
+   The deployed backend packages the production ML artifacts under `backend/app/models/`:
+   - `energy_model.joblib` (Trained XGBoost regressor)
+   - `preprocessing.joblib` (RobustScaler and one-hot encoder)
+   - `model_metadata.json` (Empirical 90% confidence boundaries and feature bounds)
+   - `metrics.json` (Chronological validation and test split metrics)
+   
+   FastAPI loads these artifacts once into RAM during application startup, ensuring that inferences execute in ~1.2 ms without retraining on incoming requests.
+6. **Backend Health & Swagger Verification**:
+   - Health endpoint: `https://enerlytics-smart-energy-predictor-backend.onrender.com/api/health`
+     ```json
+     {
+       "status": "online",
+       "model_loaded": true,
+       "model_version": "xgboost-v1"
+     }
+     ```
+   - OpenAPI / Swagger documentation: `https://enerlytics-smart-energy-predictor-backend.onrender.com/docs`
+
+#### 4. Frontend Dynamic API Configuration (Zero-Config Simplicity)
+Initially, `frontend/src/services/api.ts` pointed exclusively to localhost:
+```typescript
+const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+```
+When deployed, `127.0.0.1` refers to the visiting user's local machine, causing network failures. Instead of introducing fragile `.env` files that need to be manually updated across environments, `frontend/src/services/api.ts` was updated with **dynamic runtime hostname detection**:
+
+```typescript
+const API_BASE =
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1'
+    ? 'http://127.0.0.1:8000/api'
+    : 'https://enerlytics-smart-energy-predictor-backend.onrender.com/api';
+
+const apiClient = axios.create({
+  baseURL: API_BASE,
+  timeout: 10000,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+```
+
+- **Local Development**: Accessing `http://localhost:5173` automatically routes all requests to the local backend `http://127.0.0.1:8000/api`.
+- **Production Cloud**: Accessing `https://enerlytics-smart-energy-predictor.vercel.app` automatically routes all requests to `https://enerlytics-smart-energy-predictor-backend.onrender.com/api`.
+- The rest of the frontend code remains completely decoupled from environment specifics.
+
+#### 5. Resilient Weather Integration
+The frontend maintains an intelligent dual-channel weather proxy:
+1. `fetchWeather()` first calls the Render backend proxy (`/api/weather/current` and `/api/weather/forecast`).
+2. If the backend is under high load or cold start, it automatically falls back to fetching directly from Open-Meteo on the client side.
+This ensures zero downtime for live atmospheric telemetry.
+
+#### 6. Frontend Deployment on Vercel
+Vercel was selected because the frontend is a modern Vite-based static application:
+
+1. **Connected Repository**: Selected the GitHub repository in the Vercel dashboard.
+2. **Configured Root Directory**:
+   - **Root Directory**: `frontend`
+   > [!NOTE]
+   > Setting Root Directory to `frontend` ensures Vercel detects `package.json` and executes within the React workspace rather than confusing root Python scripts.
+3. **Configured Build Settings**:
+   - **Framework Preset**: Vite
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+   - **Install Command**: `npm install`
+4. **Instant Edge Deployment**: Vercel compiles the TypeScript code into optimized static bundles and distributes them across its global CDN:
+   - **Live Production URL**: `https://enerlytics-smart-energy-predictor.vercel.app`
+
+---
+
+### 🔄 End-to-End Production Request Flow
+
+When an engineer conducts an energy simulation on the public website:
+
+```
+User inputs building parameters in React UI
+                  │
+                  ▼
+       predictEnergy() in Axios
+                  │
+                  ▼ (HTTPS POST)
+    Render FastAPI Gateway (/api/predict)
+                  │
+                  ▼
+      Pydantic Request Validation
+                  │
+                  ▼
+   Out-of-Distribution (OOD) Safety Guard
+                  │
+                  ▼
+   Feature Engineering (Comfort Indices)
+                  │
+                  ▼
+      XGBoost Inference (~1.2 ms)
+                  │
+                  ▼
+    Lundberg TreeSHAP Attributions
+                  │
+                  ▼
+     Rule-Based Recommendations Engine
+                  │
+                  ▼ (JSON Response)
+          React Frontend UI
+(Renders Waterfall Chart + 90% CI + Efficiency Grade)
+                  │
+                  ▼
+     Browser window.localStorage
+   (Silent, private client-side log)
+```
+
+---
+
+### 🔒 Client-Side Storage: Zero-Database Overhead
+
+One key engineering decision in Enerlytics is eliminating cloud database requirements:
+- Enerlytics leverages `window.localStorage['energy_predictions']` for prediction logs.
+- Each user's history resides exclusively within their own browser.
+- Eliminates cloud DB provisioning, connection pooling, secret management, and cold start connection drops.
+
+---
+
+### 🚀 Continuous Deployment (CI/CD) Workflow
+
+Both platforms automatically sync with GitHub `main`:
+
+```
+                    ┌────────────────────────────┐
+                    │  git commit & git push     │
+                    │       origin main          │
+                    └─────────────┬──────────────┘
+                                  │
+                 ┌────────────────┴────────────────┐
+                 ▼                                 ▼
+    ┌─────────────────────────┐       ┌─────────────────────────┐
+    │     Vercel Webhook      │       │     Render Webhook      │
+    ├─────────────────────────┤       ├─────────────────────────┤
+    │ • Detects frontend/     │       │ • Pulls new commits     │
+    │ • Runs npm run build    │       │ • Runs pip install      │
+    │ • Deploys edge static   │       │ • Restarts Uvicorn      │
+    └─────────────────────────┘       └─────────────────────────┘
+```
+
+---
+
+### 🎯 10-Point Technical Deployment Summary (For Interviews & Portfolio)
+
+1. **Decoupled Client-Server Architecture**: Separated a modern React 19 / Vite frontend from an asynchronous FastAPI Python microservice.
+2. **Dual Cloud Hosting Strategy**: Leveraged Vercel for high-speed edge static delivery and Render for persistent ASGI Python container execution.
+3. **Monorepo Root Isolation**: Configured Vercel's Root Directory to `frontend/` so build tools correctly target `package.json` without top-level Python conflicts.
+4. **Production Server Binding**: Configured Uvicorn on Render with `--host 0.0.0.0 --port $PORT` to bind across dynamic containerized cloud interfaces.
+5. **Zero-Retraining Startup**: Serialized trained XGBoost and preprocessing pipelines into `.joblib` files, loaded once into memory during FastAPI startup for sub-2ms inference.
+6. **Zero-Config Dynamic API Routing**: Implemented dynamic hostname sniffing in Axios, eliminating `.env` deployment mismatches between localhost and cloud.
+7. **Two-Tier Resilient Weather Sync**: Structured real-time weather retrieval with a backend Open-Meteo proxy featuring client-side fallback if the API is unreachable.
+8. **Stateless Backend with Client-Side Persistence**: Maintained zero cloud database overhead; prediction histories are stored securely and privately in client `window.localStorage`.
+9. **Automated CI/CD Pipelines**: Connected both hosting platforms to GitHub `main` for instant automated builds and zero-downtime rolling deployments.
+10. **Explainable AI in Production**: Exposed Lundberg TreeSHAP decompositions over REST APIs, rendering real-time waterfall impact charts directly in the production web interface.
 
 ---
 
