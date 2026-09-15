@@ -1053,8 +1053,3 @@ Enerlytics operates on a **zero-database, privacy-first model**:
 - **Project**: Enerlytics — Smart Energy Consumption Predictor  
 - **Version**: `2.4-PROD`  
 
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**. You are free to use, modify, and distribute this software for educational, research, and portfolio purposes. See the [LICENSE](LICENSE) file for complete details.
